@@ -1,0 +1,49 @@
+table customer{
+    id int [PK]
+    firstname text [NOT NULL]
+    lastname text [NOT NULL]
+    gender text
+    address text
+    email text
+    phone text
+}
+
+table officer{
+  id int [PK]
+  firstname text [NOT NULL]
+  lastname text [NOT NULL]
+  email text
+  phone text
+}
+
+table menu_head{
+  id int(pk)
+  menu_name text
+}
+
+table menu_detail{
+  id int [PK]
+  menu_id int [not null, ref: > menu_head.id]
+  size_dish text 
+  price real
+}
+
+table payment_type{
+  id int [PK]
+  payment text
+}
+
+table order_detail{
+  id int [PK]
+  order_id int [not null, ref: > order_head.id]
+  menu_detail_id int [not null, ref: - menu_detail.id]
+  quantity int
+}
+
+table order_head{
+  id int [PK]
+  order_date date
+  customer_id int [not null, ref: > customer.id]
+  officer_id int [not null, ref: > officer.id]
+  payment_id int [not null, ref: - payment_type.id]
+}
