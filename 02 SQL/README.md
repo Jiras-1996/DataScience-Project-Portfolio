@@ -1,4 +1,4 @@
-## SQL
+## SQL Code
 
 See my Homework SQL in [Replit](https://replit.com/@jirasadthsutana/Project-Design-database-and-Query?v=1#main.sql)
 
