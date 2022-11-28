@@ -10,12 +10,12 @@ All Project in DataScience Bootcamp #Batch05
 - Dashboard(Power BI, Tableau, Looker Studio)
 
 # Homework Project
-- Sprint2 : Spreadsheets
-- Sprint3 : SQL Database
-- Sprint4 : R Programming
-- Sprint6 : Data Visualization
-- Sprint7 : Statistics
-- Sprint8 : Machine Learning
-- Sprint10 : Python Programming
-- Sprint11 : Python for Data Analyst
-- Sprint12 : Dashboard
+- Sprint 02 : Spreadsheets
+- Sprint 03 : SQL Database
+- Sprint 04 : R Programming
+- Sprint 06 : Data Visualization
+- Sprint 07 : Statistics
+- Sprint 08 : Machine Learning
+- Sprint 10 : Python Programming
+- Sprint 11 : Python for Data Analyst
+- Sprint 12 : Dashboard
