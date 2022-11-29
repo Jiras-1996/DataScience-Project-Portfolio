@@ -6,7 +6,7 @@ All Project in DataScience Bootcamp #Batch05
 - SQL Database
 - R Programming
 - Python Programming
-- Statistics & Machine Learning
+- Essential Statistics & Machine Learning
 - Dashboard(Power BI, Tableau, Looker Studio)
 
 # Homework Project
