@@ -1,8 +1,9 @@
 -- SQL CRUD Operations 
 -- EP01 - Create Table & Insert Data 
+
 -- create table employee
 CREATE TABLE employee (
-		id INT UNIQUE,
+	id INT UNIQUE,
   	name TEXT,
   	department TEXT,
   	position TEXT,
@@ -11,18 +12,19 @@ CREATE TABLE employee (
 
 -- insert data into employee
 INSERT INTO employee VALUES 
-	(1, 'David', 'Marketing', 'CEO', 100000),
-  (2, 'John' , 'Marketing', 'VP', 85000 ),
-  (3, 'Marry', 'Sales', 'Manager', 60000); 
+(1, 'David', 'Marketing', 'CEO', 100000),
+(2, 'John' , 'Marketing', 'VP', 85000 ),
+(3, 'Marry', 'Sales', 'Manager', 60000); 
     
 INSERT INTO employee VALUES 
-	(4, 'Harry', 'IT', 'Senior Manager', 88000),
-  (5, 'Walker', 'IT', 'Manager', 68000); 
+(4, 'Harry', 'IT', 'Senior Manager', 88000),
+(5, 'Walker', 'IT', 'Manager', 68000); 
     
 -- select all columns from employee
 SELECT * FROM employee;
 
 --EP02 - Select Data
+
 -- select all column
 SELECT * FROM employee;
 
@@ -42,6 +44,7 @@ FROM employee
 LIMIT 1;
 
 -- EP03 - Transform Column
+
 --Transform Column with LOWER Case
 SELECT
 	name,
@@ -59,6 +62,7 @@ SELECT
 FROM employee;
 
 -- EP04 - Filter Data
+
 -- Normal form
 SELECT * FROM employee
 WHERE department = 'Marketing' AND salary >= 90000;
@@ -74,13 +78,16 @@ SELECT * FROM employee
 WHERE department IN ('Markerting' , 'IT');
 
 -- EP05 - Update Data
-UPDATE emoployee
+
+-- Update Data in table
+UPDATE employee
 SET salary = 90000
 WHERE id = 1;
 
 SELECT * FROM employee;
 
 -- EP06 - Delete Data
+
 -- Delete single Data
 DELETE FROM employee
 WHERE name = 'Walker';
@@ -97,26 +104,25 @@ SELECT * FROM employee;
 DELETE FROM employee;
 
 -- EP07 - Alter Table (เปลี่ยนชื่อ table)
--- เปลี่ยนชื่อ table จาก employee เป็น Myemployee
 
+-- เปลี่ยนชื่อ table จาก employee เป็น Myemployee
 ALTER TABLE employee RENAME TO Myemployee
 ADD email TEXT;
 
 -- Update data in employee
-
 UPDATE Myemployee
 SET email = 'admin@company.com'
 
 SELECT * FROM Myemployee;
 
 -- Update data in id
-
 SET email = 'ceo@company.com'
 WHERE id = 1;
 
 SELECT * FROM Myemployee;
 
 -- EP08 - Copy & Drop Table
+
 -- Copy Table
 CREATE TABLE Myemployee_Backup AS
 SELECT * FROM Myemployee;
