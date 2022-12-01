@@ -1,3 +1,5 @@
+-- SQL CRUD Operations
+
 -- EP01 - Create Table & Insert Data 
 -- ตอนเราสร้าง employee table เรากำหนดคอลัมน์ id เป็น UNIQUE แปลว่าคอลัมนี้ห้ามใส่ข้อมูลซ้ำนะครับ ถ้าเราพยายาม insert into คอลัมน์นี้ด้วยไอดีที่มีอยู่แล้ว SQLite จะฟ้อง error UNIQUE Constraint ขึ้นมา
 -- create table employee
