@@ -1,7 +1,5 @@
--- SQL CRUD Operations
-
+-- SQL CRUD Operations 
 -- EP01 - Create Table & Insert Data 
--- ตอนเราสร้าง employee table เรากำหนดคอลัมน์ id เป็น UNIQUE แปลว่าคอลัมนี้ห้ามใส่ข้อมูลซ้ำนะครับ ถ้าเราพยายาม insert into คอลัมน์นี้ด้วยไอดีที่มีอยู่แล้ว SQLite จะฟ้อง error UNIQUE Constraint ขึ้นมา
 -- create table employee
 CREATE TABLE employee (
 		id INT UNIQUE,
@@ -119,7 +117,6 @@ WHERE id = 1;
 SELECT * FROM Myemployee;
 
 -- EP08 - Copy & Drop Table
--- ก่อนจะ DROP TABLE ต้องคิดดีๆก่อนนะครับ เพราะว่าลบแล้ว table จะหายไปเลย ไม่สามารถเรียกกลับมาได้ (undo) นอกจาก database admin จะมีการ backup ข้อมูลเอาไว้
 -- Copy Table
 CREATE TABLE Myemployee_Backup AS
 SELECT * FROM Myemployee;
