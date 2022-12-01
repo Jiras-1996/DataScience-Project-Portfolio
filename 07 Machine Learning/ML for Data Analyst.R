@@ -92,9 +92,9 @@ knn_model
 
 set.seed(42) # ก่อนเทรนโมเดลควร set.seed() ก่อนทุกครั้ง
 knn_model <- train(medv ~ ., # สามารถเลือกเฉพาะคอลัมบ์ได้
-									data = train_df,
-									method = "knn",
-									metric = "RMSE") # absolute metric ยิ่งมีค่าต่ำยิ่งดี ส่วน Rsquared ใช้ในการเปรียบเทียบโมเดล
+			data = train_df,
+			method = "knn",
+			metric = "RMSE") # absolute metric ยิ่งมีค่าต่ำยิ่งดี ส่วน Rsquared ใช้ในการเปรียบเทียบโมเดล
 knn_model
 
 ## 2.2.2 เทรนแค่บางตัวแปร (แบบที่ 2)
@@ -102,9 +102,9 @@ knn_model
 
 set.seed(42) # ก่อนเทรนโมเดลควร set.seed() ก่อนทุกครั้ง
 knn_model <- train(medv ~ crim + rm + tax + zn +nox, 
-									data = train_df,
-									method = "knn",
-									metric = "RMSE") 
+		data = train_df,
+		method = "knn",
+		metric = "RMSE") 
 knn_model
 
 ## 2.3 เทรนโมเดลโดยต้องการหาค่า k จำนวน 5 ค่า (tuneLength)
@@ -113,10 +113,10 @@ knn_model
 
 set.seed(42)
 knn_model <- train(medv ~ crim + rm + tax + zn +nox, 
-									data = train_df,
-									method = "knn",
-									metric = "RMSE",
-									tuneLength = 5) # ปรับค่า k ที่ใช้ในการเทรนเป็น 5 ค่า
+		data = train_df,
+		method = "knn",
+		metric = "RMSE",
+		tuneLength = 5) # ปรับค่า k ที่ใช้ในการเทรนเป็น 5 ค่า
 knn_model
 
 ## 2.4 เขียน tunegrid เพื่อใส่แทน tuneLength (Grid Search Hyperparameter(ค่า K) Tuning)
@@ -125,10 +125,10 @@ set.seed(42)
 grid_k <- data.frame(k = 5:9) # กำหนด k จาก 5 ถึง 9
 
 knn_model <- train(medv ~ crim + rm + tax + zn +nox, 
-									data = train_df,
-									method = "knn",
-									metric = "RMSE",
-									tunegrid = grid_k) # เปลี่ยน tuneLength เป็น tunegrid
+		data = train_df,
+		method = "knn",
+		metric = "RMSE",
+		tunegrid = grid_k) # เปลี่ยน tuneLength เป็น tunegrid
 knn_model
 
 ## 2.5 เปลี่ยน resampling จาก boostrap => K-fold , LOOCV
@@ -145,11 +145,11 @@ ctrl <- trianControl(
 )
 
 knn_model <- train(medv ~ crim + rm + tax + zn +nox, 
-									data = train_df,
-									method = "knn",
-									metric = "RMSE",
-									tunegrid = grid_k,
-									trControl = ctrl)  # ตัวควบคุมพฤติกรรมการเทรนโมเดล
+		data = train_df,
+		method = "knn",
+		metric = "RMSE",
+		tunegrid = grid_k,
+		trControl = ctrl)  # ตัวควบคุมพฤติกรรมการเทรนโมเดล
 knn_model
 
 # 2.5.2 LOOCV Case
@@ -162,11 +162,11 @@ ctrl <- trianControl(
 )
 
 knn_model <- train(medv ~ crim + rm + tax + zn +nox, 
-									data = train_df,
-									method = "knn",
-									metric = "RMSE",
-									tunegrid = grid_k,
-									trControl = ctrl) 
+		data = train_df,
+		method = "knn",
+		metric = "RMSE",
+		tunegrid = grid_k,
+		trControl = ctrl) 
 knn_model
 
 # 2.5.3 K-fold Case
@@ -180,11 +180,11 @@ ctrl <- trianControl(
 )
 
 knn_model <- train(medv ~ crim + rm + tax + zn +nox, 
-									data = train_df,
-									method = "knn",
-									metric = "RMSE",
-									tunegrid = grid_k,
-									trControl = ctrl)  # ตัวควบคุมพฤติกรรมการเทรนโมเดล
+		data = train_df,
+		method = "knn",
+		metric = "RMSE",
+		tunegrid = grid_k,
+		trControl = ctrl)  # ตัวควบคุมพฤติกรรมการเทรนโมเดล
 knn_model
 
 ## 2.6 Model Final Version (repeatedcv) [เลือกใช้โมเดลนี้เป็นโมเดลตามที่เราต้องการ]
@@ -664,13 +664,13 @@ ctrl <- trainControl(
 )
 
 tree_model <- train(diabetes ~ .,
-										data =  train_df,
-										method = "rpart",
-										tuneLength = 10,
-										trControl = trainControl(
-											method = "cv",
-											number = 5
-										))
+		data =  train_df,
+		method = "rpart",
+		tuneLength = 10,
+		trControl = trainControl(
+				method = "cv",
+				number = 5
+		))
 
 # version 3 : Tune cp with tuneGrid
 set.seed(99)
@@ -686,13 +686,13 @@ ctrl <- trainControl(
 myGrid <- data.frame(cp = seq(0.001, 0.3, by = 0.005))
 
 tree_model <- train(diabetes ~ .,
-										data =  train_df,
-										method = "rpart",
-										tuneGrid = myGrid,
-										trControl = trainControl(
-											method = "cv",
-											number = 5
-										))
+		data =  train_df,
+		method = "rpart",
+		tuneGrid = myGrid,
+		trControl = trainControl(
+					method = "cv",
+					number = 5
+		))
 
 tree_model$finalModel
 
@@ -731,13 +731,13 @@ ctrl <- trainControl(
 myGrid <- data.frame(mtry = 2:7)
 
 rf_model <- train(diabetes ~ .,
-				    data =  train_df,
-					method = "rf",
-					tuneGrid = myGrid,
-					trControl = trainControl(
+		data =  train_df,
+		method = "rf",
+		tuneGrid = myGrid,
+		trControl = trainControl(
 					method = "cv",
 					number = 5
-					))
+		))
 
 # version 02
 set.seed(99)
@@ -783,7 +783,7 @@ rf_model <- train(diabetes ~ .,
                   data =  train_df,
                   method = "rf",
                   metric = "AUC",  
-									preProcess = c("center", "scale", "nzv"),
+	          preProcess = c("center", "scale", "nzv"),
                   tuneGrid = myGrid,
                   trControl = trainControl(
                       method = "cv",
@@ -821,18 +821,18 @@ test_df <- df[-id, ]
 set.seed(42)
 
 myGrid <- expand.grid(alpha = 0:1,
-					lambda = seq(0.001, 1, length = 20))
+		lambda = seq(0.001, 1, length = 20))
 
 regularized_model <- train(
-						diabetes ~ .,
+			diabetes ~ .,
                         data =  train_df,
-						method = "glmnet",  # กำหนดว่าโมเดลจะใช้ Ridge and Lasso
-						tuneGrid = myGrid,
-						trControl = trainControl(
-						method = "cv",
-						number = 5,
-						verboseIter = TRUE
-						))
+			method = "glmnet",  # กำหนดว่าโมเดลจะใช้ Ridge and Lasso
+			tuneGrid = myGrid,
+			trControl = trainControl(
+					method = "cv",
+					number = 5,
+					verboseIter = TRUE
+			))
 
 ## Step 3 : test model
 p <- predict(regularized_model, newdata = test_df)
