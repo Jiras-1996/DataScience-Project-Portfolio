@@ -131,7 +131,7 @@ login_fn <- function() {
 			pw_input <- readline("Password: ")
 
 		# check username, password
-			if (username == un_input & password == pw_input) {
+			if (username == un_input && password == pw_input) {
 					print("Thank you! you have successfully login.")
 			} else {
 					print("Sorry, please try again.")
