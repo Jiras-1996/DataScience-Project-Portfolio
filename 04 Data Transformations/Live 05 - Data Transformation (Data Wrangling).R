@@ -391,11 +391,11 @@ tracks_clean %>%
 ## username, password, host (server), port, dbname
 library(RPostgreSQL)
 con <- dbConnect(PostgreSQL(),
-                 user = "yphzsabl",
-                 password = "9dAsYYS3GDuHUT5sotuktE0yQ13EkRQv",
+                 user = "enter your username",
+                 password = "enter your password",
                  host = "rosie.db.elephantsql.com",
                  port = 5432,
-                 dbname = "yphzsabl")
+                 dbname = "enter your dbname")
 
 dbListTables(con)
 
