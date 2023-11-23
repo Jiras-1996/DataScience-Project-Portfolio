@@ -1,5 +1,5 @@
-# DataScience Bootcamp #Batch05 By DataRockie
-All Project in DataScience Bootcamp #Batch05
+# DataScience Bootcamp By DataRockie
+All Project in DataScience Bootcamp 
 
 # My Skills
 - Spreadsheets
