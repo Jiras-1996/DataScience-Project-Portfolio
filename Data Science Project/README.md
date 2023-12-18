@@ -1,1 +1,0 @@
-# DataScience Project presented by Jiras Adtthsutanan
