@@ -1,6 +1,6 @@
 # Data-Science Project Portfolio 🚀🚀🚀
 
-## My Skills
+## My Skills 🛰️
 - Excel / Google Sheet (Query function, Vlookup, Xlookup)
 - SQL Database (Case, Subquery) / RDBMS / Database design
 - BPMN 2.0 (draw.io)
@@ -24,4 +24,4 @@
 - Power BI (Power Query, Data model)
 - AWS Cloud (S3, Athena, Glue)
 
-## My Project
+## My Project 🛸
