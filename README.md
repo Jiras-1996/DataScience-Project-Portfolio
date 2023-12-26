@@ -1,4 +1,4 @@
-# Data Science Project portfolio
+# Data-Science Project Portfolio
 
 ## My Skills
 - Excel / Google Sheet (Query function, Vlookup, Xlookup)
