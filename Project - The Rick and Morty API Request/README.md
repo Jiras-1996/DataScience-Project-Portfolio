@@ -33,6 +33,6 @@
 
 ## Step 4 : Data Analysis and Visualization
 - Question 01 : finding character in Rick & Morty multiverse Death or Alive Value
-- Question 02 : finding Top 10 location of Characters live in
-- Question 03 : finding ratio of gender in Rick & Morty multiverse
-- Question 04 : finding the most Type in Rick & Morty multiverse
+- Question 02 : find Top 10 location of Characters live in
+- Question 03 : Ratio of gender in Rick & Morty multiverse
+- Question 04 : find the most Type in Rick & Morty multiverse
