@@ -18,7 +18,7 @@
 - Convert data type column "Row ID" and "Postal Code" to object
 - Convert data type column "Order Date" and "Ship Date" to datetime
 - find missing value in column "Postal Code"
-- Aggregate data with df.describe(), .unique()  
+- Aggregate data with function : df.describe(), .unique()  
 
 ## Steps 02 : Data Analysis 
 
