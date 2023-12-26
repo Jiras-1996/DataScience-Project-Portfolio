@@ -18,7 +18,7 @@
 - API (Kaggle API, Line Notify, Express.js)
 - Postman
 - Git / Github
-- Math & Statistic (Basic Stat, AB testing, Correlation, Linear & Logistic Regression)
+- Mathematics & Statistic (Basic Stat, AB testing, Correlation, Linear & Logistic Regression)
 - Looker Studio
 - Tableau
 - Power BI (Power Query, Data model)
