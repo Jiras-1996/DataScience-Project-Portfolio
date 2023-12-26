@@ -1,4 +1,5 @@
 # The Rick and Morty API Request
+<br>
 <p align="center">
 <img src ='https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_QL75_UX500_CR0,234,500,281_.jpg'>
 </p>
