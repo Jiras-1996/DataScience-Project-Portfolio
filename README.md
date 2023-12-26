@@ -1,4 +1,4 @@
-# DataScience Project in Data Science Bootcamp 
+# Data Science Project portfolio
 
 ## My Skills
 - Excel / Google Sheet (Query function, Vlookup, Xlookup)
