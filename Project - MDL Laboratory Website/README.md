@@ -1,40 +1,8 @@
-# MDL-Laboratory-Website-Project
+# MDL Laboratory Website Project
+สวัสดีครับ ยินดีต้อนรับสู่โปรเจค **" MDL Laboratory Website "** โดยโปรเจคนี้เป็นโปรเจคแรกในสายงานด้าน Data ของผมเอง จุดเริ่มต้นมาจากในปี 2021 ขณะนั้นทำงานเป็นนักวิทยาศาสตร์ อยู่ที่มหาวิทยาลัยศรีนครินทรวิโรฒ เนื่องจากระบบการทำงานแบบดั้งเดิมใช้การบันทึกข้อมูลลงในกระดาษซึ่งเสี่ยงต่อการตกหล่นของข้อมูล จึงได้ทำการสร้างเว็บไซต์ขึ้นมาโดยใช้บริการของ Google site 
 
-In the old system my laboratory has use paper to collect a data. It’s not convenient when you want to see a summary result. When i working first day, i see this problem from old system and planing to create a new system for laboratory. It must easy to use and rapid for fixed when a website has a problem .
+ภายในเว็บไซต์มีฟีเจอร์หลักๆ คือ **ระบบการจองห้องแลป** , **ระบบการยืม-คืนอุปกรณ์วิทยาศาสตร์** , **ระบบแจ้งซ่อม** เป็นต้น ซึ่งฟีเจอร์เหล่านี้พัฒนาขึ้นโดยการใช้งาน **Google form** , **Google sheet** , **Google calendar** , **Autocrat extension** , **Appscript** และ **Line notify** จนออกมาเป็นฟีเจอร์ที่ต้องการ
 
-New system i use google site to create the website. It very easy to use because google developer has create this solution for non-programmer, you can create website with low-coding tool.
+นอกจากนี้ยังมีการเขียนโค้ดด้วยภาษา Javascript ใน Appscript เพื่อให้ได้การทำงานของโปรแกรมตามที่ต้องการและเนื่องจากเป็นการเขียนโปรแกรมครั้งแรกในชีวิต จึงใช้การจินตนาการภาพในหัวถึงฟังก์ชั่นการทำงานของโปรแกรมที่ต้องการ หลังจากนั้นจึงไปค้นหาโค้ดตามแหล่งต่างๆใน google ก่อนนำมาประกอบเข้าด้วยกัน สุดท้ายเขียนโค้ดด้วยตนเองใจุดที่ไม่สามารถหาได้จาก google เป็นอันเสร็จเรียบร้อย
 
-See My Laboratory Website [click](https://sites.google.com/g.swu.ac.th/mdllaboratory-med-swu/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81?authuser=2)
-
-# Tools :
-
-- Google Site
-- Google Form
-- Google Sheet
-- Google Apps Script
-- Line Notify
-- Autocrat (Google Sheet plugin)
-
-# FunctionStructure
-
-- Booking Function
-
-![structure](./image/Booking_Function.jpg)
- 
-- Online form
-
-![structure](./image/Online_form.jpg)
- 
-# Interface Website
-
-- Home Page
-![structure](./image/homepage.png)
-
-- Booking Calendar
-![structure](./image/booking_calendar.png)
-
-- Online Booking Form
-![structure](./image/online_booking_form.png)
-
-- Collect data in Spreadsheets
-![structure](./image/data_collect_in_spreadsheets.png)
+หลังจากฟีเจอร์ต่างๆเสร็จเรียบร้อยแล้ว ก็เริ่มดำเนินการทดสอบโปรแกรมเพื่อให้ได้ผลลัพธ์ตามที่ต้องการ ซึ่งตรงจุดนี้เป็นเนื้องานของการทำ **" Software Tester "** แต่ในกรณีนี้จะไม่มีการเขียน Test case สำหรับดำเนินการทดสอบ หลักๆแล้วจะทำการทดสอบฟีเจอร์ **การจองห้อง** กับ **การยืม-คืนคืนอุปกรณ์วิทยาศาสตร์** เป็นหลักโดยปัญหาที่พบ คือ การแสดงผลข้อมูลในกลุ่ม Line ที่ดึงข้อมูลจาก Google sheet ไปแสดงโดยผ่าน API เมื่อทดสอบเรียบร้อยก็พร้อมสำหรับการใช้งานจริง
